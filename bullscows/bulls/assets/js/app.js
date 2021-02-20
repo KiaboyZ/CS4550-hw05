@@ -12,24 +12,15 @@ import "../css/app.scss"
 //     import {Socket} from "phoenix"
 //     import socket from "./socket"
 //
-import "phoenix_html"
-import React, { useState } from 'react';
+import "phoenix_html";
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Demo(_) {
-    const [count, setCount] = useState(0);
-
-    return (
-        <div>
-          <p>Count: {count}</p>
-          <p><button onClick={() => setCount(count + 1)}>+1</button></p>
-        </div>
-    )
-}
+import Bulls from './Bulls';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Demo />
+    <Bulls />
   </React.StrictMode>,
   document.getElementById('root')
 );
