@@ -10,6 +10,13 @@ defmodule Bulls.Game do
         if (not validate_loop(state, guess, 0)) do
             false
         end
+
+        guess_list = String.graphemes(guess)
+        unique_list = Enum.uniq(guess_list)
+        if (Enum.count(unique_list) != 4) do
+            %{state | caption: "ERROR: No duplicate characters allowed." }
+            false
+        end
         
         if (Enum.member?(state.guesses, guess)) do
             %{state | caption: "ERROR: No duplicate guesses allowed." }
@@ -31,12 +38,6 @@ defmodule Bulls.Game do
 
         if (not Enum.member?(numbers, current_char)) do
             %{state | caption: "ERROR: Characters must be digits 0-9." }
-            false
-        end
-
-        temp_guess = String.replace(guess, current_char, "", global: true)
-        if (String.length(temp_guess) != 4) do
-            %{state | caption: "ERROR: No duplicate characters allowed." }
             false
         end
 
