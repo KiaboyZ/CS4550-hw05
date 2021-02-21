@@ -1,0 +1,31 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+    Kia Zafar
+
+2. What hostname did you deploy to?
+    hw05.kia.town
+
+3. Which parts of this assignment did you have trouble with, if any?
+    I had trouble with all of the assignment, especially with getting
+the html on the browser locally and getting it working on my server.
+Also with getting the state to not reset every time I submitted a guess.
+
+4. What part of your application state is on the server?
+    I think the secret code, guesses, results, guess, a boolean that
+says if the submit button should be disabled, and a caption string.
+
+5. What part of your application state, if any, is in the browser?
+    I think the guesses, results, guess, a boolean that says if the
+submit button should be disabled, and a caption string.
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Task 4
+ - Task 5
+ - Task 6
+ - Task 7
+ - Task 8
